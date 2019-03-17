@@ -7,6 +7,8 @@ public class hw3_2_2keyeventadapter extends java.awt.Frame{
 	public hw3_2_2keyeventadapter(){
 		super("keyevent adapter");
 		KeyListener key1=new KeyListener();
+		int cha;
+		
 		this.addKeyListener(key1);
 		this.setSize(200, 200);
 
@@ -58,21 +60,24 @@ class KeyListener extends KeyAdapter{
     switch(i) {
       case KeyEvent.VK_UP: 
         dy = -5;
+		System.out.println("dy-5");
         break;
 
       case KeyEvent.VK_DOWN: 
         dy = 5;
+		System.out.println("dy+5");
         break;
 
       case KeyEvent.VK_LEFT: 
         dx = -5;
+		System.out.println("dx-5");
         break;
 
       case KeyEvent.VK_RIGHT: 
         dx = 5;
+		System.out.println("dx+5");
         break;
     }
-    key1.setLocation(key1.getX() + dx, key1.getY() + dy);
   }  
 
   public void keyReleased(KeyEvent e) {
